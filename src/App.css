@@ -128,3 +128,18 @@ label {
   font-size: 40px;
   margin: 10px;
 }
+
+.pagination li {
+  display: inline;
+}
+
+.pageItem {
+  margin: 10px;
+  font-size: 25px;
+  transition: .3s;
+}
+
+.pageItem:hover{
+  margin: 0 20px;
+  font-size: 35px;
+}

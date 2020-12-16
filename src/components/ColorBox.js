@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ColorBox = ({color}) => {
+const ColorBox = ({color, setSelectedColor}) => {
   return (
-    <div className='colorContainer'>
+    <div className='colorContainer' onClick={() => setSelectedColor(color)}>
       <div className='color' style={{background: color}}/>
       <div className='hex'>
         {color}

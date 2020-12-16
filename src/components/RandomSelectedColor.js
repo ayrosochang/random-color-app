@@ -13,7 +13,7 @@ const RandomSelectedColor = ({colors, selectedColor, setSelectedColor}) => {
         </div>
       </div>
       <div className='body bodyContent'>
-        {!!colors && colors.map((color) => (<div key={color}><ColorBox color={color} /></div>))}
+        {!!colors && colors.map((color) => (<div key={color}><ColorBox color={color} setSelectedColor={setSelectedColor} /></div>))}
       </div>
       <div style={{display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
         <button className='button' onClick={() => setSelectedColor(null)}>Clear</button>
