@@ -27,7 +27,7 @@ const App = () => {
     if(!!search && search.length === 0) {
       setColors(data && data.getAllColors)
     }
-  }, [search])
+  }, [search]) // eslint-disable-next-line
 
   if (error) return <div>{error}</div>
   if (loading) return <div>{loading}</div>
