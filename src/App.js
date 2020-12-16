@@ -15,7 +15,7 @@ const GET_ALL_COLORS = gql`
 const App = () => {
   const [colors, setColors] = useState([])
   const [selectedColor, setSelectedColor] = useState(null)
-  const [search, setSearch] = useState(null)
+  const [search, setSearch] = useState('')
 
   const { data, error, loading } = useQuery(GET_ALL_COLORS)
 
@@ -24,7 +24,7 @@ const App = () => {
   }, [data])
 
   useEffect(() => {
-    if(!!search && search.length === 0) {
+    if(search.length === 0) {
       setColors(data && data.getAllColors)
     }
   // eslint-disable-next-line
