@@ -55,7 +55,7 @@ const App = () => {
             ? 
             <RandomSelectedColor colors={colors} selectedColor={selectedColor} setSelectedColor={setSelectedColor} />
             :
-            !!colors && colors.map((color) => (<ColorBox color={color} />))
+            !!colors && colors.map((color) => (<div key={color}><ColorBox color={color} /></div>))
           }
         </div>
       </div>

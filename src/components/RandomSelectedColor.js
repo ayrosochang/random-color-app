@@ -2,7 +2,6 @@ import React from 'react'
 import ColorBox from './ColorBox'
 
 const RandomSelectedColor = ({colors, selectedColor, setSelectedColor}) => {
-  console.log(colors)
   return(
     <div className='randomContainer'>
       <div style={{display: 'flex'}}>
@@ -14,7 +13,7 @@ const RandomSelectedColor = ({colors, selectedColor, setSelectedColor}) => {
         </div>
       </div>
       <div className='body bodyContent'>
-        {!!colors && colors.map((color) => (<ColorBox color={color} />))}
+        {!!colors && colors.map((color) => (<div key={color}><ColorBox color={color} /></div>))}
       </div>
       <div style={{display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
         <button className='button' onClick={() => setSelectedColor(null)}>Clear</button>
