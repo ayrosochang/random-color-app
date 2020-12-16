@@ -41,6 +41,13 @@ html,body{
   align-content: flex-start;
 }
 
+.bodyContent1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
 .sideDrawer {
   background: #d6d8d8;
   height: calc(100vh - 100px);

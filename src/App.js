@@ -62,14 +62,16 @@ const App = () => {
       </div>
       <div className='body'>
         <SideDrawer colors={colors} setSelectedColor={setSelectedColor} />
-        <div className='bodyContent'>
-          {
-            !!selectedColor 
-            ? 
-            <RandomSelectedColor colors={currentColor} selectedColor={selectedColor} setSelectedColor={setSelectedColor} />
-            :
-            currentColor.map((color) => (<div key={color}><ColorBox color={color} setSelectedColor={setSelectedColor} /></div>))
-          }
+        <div className='bodyContent1'>
+          <div className='bodyContent'>
+            {
+              !!selectedColor 
+              ? 
+              <RandomSelectedColor colors={currentColor} selectedColor={selectedColor} setSelectedColor={setSelectedColor} />
+              :
+              currentColor.map((color) => (<div key={color}><ColorBox color={color} setSelectedColor={setSelectedColor} /></div>))
+            }
+          </div>
           <Pagination colorPerPage={colorPerPage} colors={colors.length} paginate={paginate}/>
         </div>
       </div>
